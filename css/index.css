@@ -149,11 +149,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 * {
-  font-family: "ElegantIcons";
+  font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
 }
 a {
   text-decoration: none;
   color: black;
+}
+header span {
+  font-family: "ElegantIcons";
 }
 .top-header {
   font-size: 1.2rem;
@@ -188,4 +191,27 @@ a {
 }
 .main-header nav ul {
   display: none;
+}
+.home .main-img {
+  background-image: url(../assets/images/main_img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 390px;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.69);
+  background-blend-mode: screen;
+  text-align: center;
+  padding: 0 6%;
+}
+.home .main-img h1 {
+  padding-top: 120px;
+  font-size: 3.3rem;
+}
+.home .main-img p {
+  padding-top: 20px;
+  font-size: 1.8rem;
+}
+.home .main-img a {
+  display: block;
+  padding-top: 135px;
 }
