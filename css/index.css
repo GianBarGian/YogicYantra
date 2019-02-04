@@ -246,3 +246,27 @@ header span {
   line-height: 1.7;
   font-size: 1.6rem;
 }
+.home .container .categories {
+  display: none;
+}
+.home .container .new-products {
+  text-align: center;
+  padding-top: 100px;
+}
+.home .container .new-products h2 {
+  font-size: 2.8rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.home .container .new-products h3,
+.home .container .new-products p {
+  display: none;
+}
+.home .container .new-products .card {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid lightgray;
+}
+.home .container .new-products .card img {
+  max-width: 100%;
+}
