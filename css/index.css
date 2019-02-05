@@ -314,13 +314,12 @@ footer p {
   background: white;
   border-radius: 10px;
   color: black;
-  padding: 6px 21px;
+  padding: 12px 21px;
 }
 .home .button:hover {
   background: rgba(221, 202, 202, 0.384);
 }
 .home .main-img {
-  position: relative;
   background-image: url(../assets/images/main_img.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -335,10 +334,23 @@ footer p {
   padding-top: 70px;
   font-size: 3.3rem;
 }
+@media (min-width: 1000px) {
+  .home .main-img h1 {
+    font-size: 5rem;
+    padding-top: 150px;
+  }
+}
 .home .main-img p {
   padding-top: 20px;
   font-size: 1.8rem;
   padding-bottom: 30px;
+}
+@media (min-width: 1000px) {
+  .home .main-img p {
+    font-size: 2.9rem;
+    padding-top: 25px;
+    padding-bottom: 80px;
+  }
 }
 .home .main-img a {
   display: inline-block;
@@ -348,10 +360,32 @@ footer p {
   background: rgba(221, 202, 202, 0.384);
   border-radius: 10px;
   color: black;
-  padding: 6px 21px;
+  padding: 12px 21px;
 }
 .home .main-img a:hover {
   background: white;
+}
+@media (min-width: 1000px) {
+  .home .main-img a {
+    border: 2px solid black;
+    text-align: center;
+    font-size: 2.1rem;
+    background: white;
+    border-radius: 10px;
+    color: black;
+    padding: 12px 21px;
+  }
+  .home .main-img a:hover {
+    background: rgba(221, 202, 202, 0.384);
+  }
+}
+@media (min-width: 1000px) {
+  .home .main-img {
+    height: 600px;
+    background-blend-mode: unset;
+    padding-left: 0;
+    padding-right: 1%;
+  }
 }
 .home .container {
   margin: 0 auto;
@@ -414,7 +448,7 @@ footer p {
   background: rgba(221, 202, 202, 0.384);
   border-radius: 10px;
   color: black;
-  padding: 6px 21px;
+  padding: 12px 21px;
 }
 .home .container .categories .card a:hover {
   background: white;
