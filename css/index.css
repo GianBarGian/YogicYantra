@@ -516,9 +516,11 @@ footer p {
 }
 .home .container .new-products h3 {
   font-size: 2.3rem;
+  padding-bottom: 10px;
 }
 .home .container .new-products p {
   font-size: 1.6rem;
+  padding-top: 10px;
 }
 .home .container .new-products .card {
   padding: 30px 0;
@@ -526,6 +528,13 @@ footer p {
 }
 .home .container .new-products .card img {
   max-width: 100%;
+  padding-bottom: 40px;
+}
+@media (min-width: 1000px) {
+  .home .container .new-products .card {
+    border: 0;
+    padding-bottom: 100px;
+  }
 }
 .home .container .reference {
   order: 1;
@@ -574,9 +583,31 @@ footer p {
 .home .container .best-selling .cards-container {
   padding-top: 70px;
 }
+@media (min-width: 1000px) {
+  .home .container .best-selling .cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
 .home .container .best-selling h3,
 .home .container .best-selling p {
   display: none;
+}
+@media (min-width: 1000px) {
+  .home .container .best-selling h3,
+  .home .container .best-selling p {
+    display: block;
+  }
+}
+.home .container .best-selling h3 {
+  font-size: 2.3rem;
+  padding-bottom: 10px;
+}
+.home .container .best-selling p {
+  font-size: 1.6rem;
+  padding-top: 10px;
 }
 .home .container .best-selling .card {
   padding: 30px 0;
@@ -584,6 +615,13 @@ footer p {
 }
 .home .container .best-selling .card img {
   max-width: 100%;
+  padding-bottom: 40px;
+}
+@media (min-width: 1000px) {
+  .home .container .best-selling .card {
+    border: 0;
+    padding-bottom: 100px;
+  }
 }
 .home .container .who-are-you {
   order: 1;

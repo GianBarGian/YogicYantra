@@ -154,18 +154,24 @@
 
             h3 {
                 font-size: 2.3rem;
+                padding-bottom: 10px;
             }
 
             p {
                 font-size: 1.6rem;
+                padding-top: 10px;
             }
 
             .card {
                 padding: 30px 0;
-                
                 border-bottom: 1px solid lightgray;
                img {
                 max-width:100%;
+                padding-bottom: 40px;
+               }
+               @media @desktop {
+                   border: 0;
+                   padding-bottom: 100px;
                }
             }
         }
@@ -220,11 +226,26 @@
             padding-top: 100px;
             .cards-container {
                 padding-top: 70px;
+                @media @desktop {
+                    .flex(row, space-between);
+                }
             }
 
-            
             h3, p {
-                display: none;
+                display: none; 
+                @media @desktop {
+                    display: block;
+                }
+            }
+
+            h3 {
+                font-size: 2.3rem;
+                padding-bottom: 10px;
+            }
+
+            p {
+                font-size: 1.6rem;
+                padding-top: 10px;
             }
 
             .card {
@@ -232,7 +253,12 @@
                 border-bottom: 1px solid lightgray;
                img {
                 max-width:100%;
+                padding-bottom: 40px;
                }
+               @media @desktop {
+                border: 0;
+                padding-bottom: 100px;
+                }
             }
         }
 
