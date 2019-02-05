@@ -196,13 +196,20 @@ header span {
   height: 40px;
 }
 .main-header nav {
+  width: 20%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: inherit;
 }
 .main-header nav ul {
   display: none;
+}
+.main-header .lens {
+  font-size: 1.9rem;
+}
+.main-header .menu {
+  font-size: 2.8rem;
 }
 footer {
   background: black;
@@ -238,6 +245,9 @@ footer .payment-methods {
 }
 footer .payment-methods h4 {
   width: 100%;
+}
+footer p {
+  padding: 20px 0;
 }
 .home .button {
   border: 2px solid black;
@@ -414,6 +424,10 @@ footer .payment-methods h4 {
   padding-bottom: 45px;
   border-bottom: 1px solid #e2e2e2;
 }
+.home .container .main-video {
+  width: 125%;
+  padding-top: 50px;
+}
 .home .container .main-video img {
   max-width: 100%;
 }
@@ -475,6 +489,8 @@ footer .payment-methods h4 {
   background-repeat: no-repeat;
   position: relative;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  background-blend-mode: difference;
 }
 .home .bottom-img h2 {
   color: white;
@@ -489,14 +505,4 @@ footer .payment-methods h4 {
 }
 .home .bottom-img a {
   bottom: 35px;
-  border: 2px solid black;
-  text-align: center;
-  font-size: 2.1rem;
-  background: rgba(221, 202, 202, 0.384);
-  border-radius: 10px;
-  color: black;
-  padding: 6px 21px;
-}
-.home .bottom-img a:hover {
-  background: white;
 }
