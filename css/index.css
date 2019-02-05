@@ -395,12 +395,6 @@ footer p {
   justify-content: flex-start;
   align-items: center;
 }
-.home .container .top-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-}
 .home .container .top-cards .card {
   display: flex;
   flex-direction: row;
@@ -421,6 +415,15 @@ footer p {
   padding-top: 10px;
   line-height: 1.7;
   font-size: 1.6rem;
+}
+@media (min-width: 1000px) {
+  .home .container .top-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+  }
 }
 .home .container .categories {
   order: 1;
