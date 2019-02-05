@@ -24,8 +24,10 @@
     }
 
     .container {
+        position: relative;
         margin: 0 auto;
         width: 80%;
+        .flex(column, flex-start, center);
 
         .top-cards {
             .flex();
@@ -51,31 +53,97 @@
         }
 
         .categories {
-            display: none;
+            order: 1;
+            padding-top: 100px;
+
+            .cards-container {
+
+            }
+
+            .card {
+                height: 300px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size:  cover;
+                padding: 1px;
+                margin-bottom: 30px;
+                border: 1px solid black;
+            }
+
+            .mat {
+                background-image: url(../assets/images/Yogamat_categories.jpg);
+                
+            }
+
+            .mala {
+                background-image: url(../assets/images/Mala_beads_categories.jpg);
+            }
+
+            .egg {
+                background-image: url(../assets/images/Yoni_egg_categories.jpg);
+            }
+
+            .special-deal {
+                background-image: url(../assets/images/Special_deal_categories.jpg);
+            }
         }
 
         .new-products {
             text-align: center;
             padding-top: 100px;
-            h2 {
-                font-size: 2.8rem;
-                padding-bottom: 10px;
-                border-bottom: 1px solid black;
+            .cards-container {
+                padding-top: 70px;
             }
+
+            
             h3, p {
                 display: none;
             }
 
             .card {
-                padding-top: 100px;
-                padding-bottom: 30px;
+                padding: 30px 0;
+                
                 border-bottom: 1px solid lightgray;
                img {
                 max-width:100%;
                }
             }
-            
         }
 
+        .reference {
+            order: 1;
+        }
+
+        .main-video {
+            img {
+                max-width:100%;
+            }
+        }
+
+        .best-selling {
+            text-align: center;
+            padding-top: 100px;
+            .cards-container {
+                padding-top: 70px;
+            }
+
+            
+            h3, p {
+                display: none;
+            }
+
+            .card {
+                padding: 30px 0;
+                
+                border-bottom: 1px solid lightgray;
+               img {
+                max-width:100%;
+               }
+            }
+        }
+
+        .who-are-you {
+            order: 1;
+        }
     }
 } 
