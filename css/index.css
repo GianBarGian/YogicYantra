@@ -432,6 +432,14 @@ footer p {
 .home .container .categories .cards-container {
   padding-top: 100px;
 }
+@media (min-width: 1000px) {
+  .home .container .categories .cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
 .home .container .categories .card {
   height: 300px;
   background-position: center;
@@ -456,6 +464,12 @@ footer p {
 .home .container .categories .card a:hover {
   background: white;
 }
+@media (min-width: 1000px) {
+  .home .container .categories .card {
+    height: 375px;
+    width: 23.5%;
+  }
+}
 .home .container .categories .mat {
   background-image: url(../assets/images/Yogamat_categories.jpg);
 }
@@ -468,6 +482,13 @@ footer p {
 .home .container .categories .special-deal {
   background-image: url(../assets/images/Special_deal_categories.jpg);
 }
+@media (min-width: 1000px) {
+  .home .container .categories {
+    order: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
 .home .container .new-products {
   text-align: center;
   padding-top: 100px;
@@ -475,9 +496,29 @@ footer p {
 .home .container .new-products .cards-container {
   padding-top: 70px;
 }
+@media (min-width: 1000px) {
+  .home .container .new-products .cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
 .home .container .new-products h3,
 .home .container .new-products p {
   display: none;
+}
+@media (min-width: 1000px) {
+  .home .container .new-products h3,
+  .home .container .new-products p {
+    display: block;
+  }
+}
+.home .container .new-products h3 {
+  font-size: 2.3rem;
+}
+.home .container .new-products p {
+  font-size: 1.6rem;
 }
 .home .container .new-products .card {
   padding: 30px 0;

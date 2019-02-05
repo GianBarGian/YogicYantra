@@ -82,7 +82,10 @@
             padding-top: 100px;
 
             .cards-container {
-                padding-top: 100px;
+                padding-top: 100px; 
+                @media @desktop {
+                    .flex(row, space-between);
+                }
             }
 
             .card {
@@ -99,6 +102,11 @@
                     display: inline-block;
                     margin-top: 150px;
                     .button(white, rgba(221, 202, 202, 0.384));
+                }
+
+                @media @desktop {
+                    height: 375px;
+                    width: 23.5%;
                 }
             }
 
@@ -118,6 +126,12 @@
             .special-deal {
                 background-image: url(../assets/images/Special_deal_categories.jpg);
             }
+
+            @media @desktop {
+                order: 0;
+                text-align: center;
+                width: 100%;
+            }
         }
 
         .new-products {
@@ -125,11 +139,25 @@
             padding-top: 100px;
             .cards-container {
                 padding-top: 70px;
+                @media @desktop {
+                    .flex(row, space-between);
+                }
             }
 
             
             h3, p {
-                display: none;
+                display: none; 
+                @media @desktop {
+                    display: block;
+                }
+            }
+
+            h3 {
+                font-size: 2.3rem;
+            }
+
+            p {
+                font-size: 1.6rem;
             }
 
             .card {
