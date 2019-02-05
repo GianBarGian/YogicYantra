@@ -1,6 +1,10 @@
-header span {
-    font-family: "ElegantIcons";
-    
+ 
+header{
+    position: relative;
+    span {
+        font-family: "ElegantIcons";
+        
+    }
 }
 .top-header {
     font-size: 1.2rem;
@@ -13,13 +17,7 @@ header span {
         display:block;
         
     }
-    ul  {
-        display: none;
-        @media @desktop {
-            width: 12%;
-            .flex(row, space-around);
-        }
-    }
+    
     @media @desktop {
         padding: 10px 2%;
         .flex(row, space-between, baseline);
@@ -41,15 +39,6 @@ header span {
     nav {
         width: 20%;
         .flex(row, space-between, inherit);
-        ul {
-            display: none;
-            @media @desktop {
-                .flex(row, space-between); 
-                flex-grow: 1;
-                font-size: 1.6rem;
-                
-            }
-        }
         @media @desktop {
             width: 25%;
         }
@@ -78,6 +67,42 @@ header span {
     
 }
 
-.more-menu {
-    display: none;
+.top-header-menu  {
+    
+    @media @desktop {
+        width: 12%;
+        .flex(row, space-around);
+    }
 }
+
+.main-header-list {
+    
+    @media @desktop {
+        .flex(row, space-between); 
+        flex-grow: 1;
+        font-size: 1.6rem;
+        
+    }
+}
+
+.main-list {
+    display: none;
+    width: 72%;
+    position: absolute;
+    background: white;
+    left: 14%;
+    font-size: 1.4rem;
+    li {
+      padding: 7px 6%;  
+    }
+    .more-menu, .top-header-menu {
+        padding-left: 7%;
+    }
+}
+
+
+
+.open {
+    display: block;
+}
+
