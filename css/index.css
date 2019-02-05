@@ -569,6 +569,11 @@ footer p {
   padding-bottom: 45px;
   border-bottom: 1px solid #e2e2e2;
 }
+@media (min-width: 1000px) {
+  .home .container .reference {
+    order: 0;
+  }
+}
 .home .container .main-video {
   width: 125%;
   padding-top: 50px;
