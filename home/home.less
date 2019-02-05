@@ -329,15 +329,31 @@
             color: white;
             border: 0;
             padding-top: 15px; 
+            @media @desktop {
+                font-size: 5rem;
+                color: black;
+                padding: 150px 50% 0 1%;
+            }
         }
         p{
             color: white;
             font-size: 1.8rem;
             padding-top: 10px;
             padding-bottom: 200px;
+            @media @desktop {
+                font-size: 2.5rem;
+                color: black;
+                padding: 50px 50% 0 1%;
+            }
         }
-        a{
-            bottom: 35px;
+        @media @desktop {
+            height: 700px;
+            background-blend-mode: unset;
+
+            a {
+                display: inline-block;
+                margin: 80px 50% 0 1%;
+            }
         }
     }
 } 
