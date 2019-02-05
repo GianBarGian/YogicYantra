@@ -1,0 +1,53 @@
+.home {
+    .main-img {
+        background-image: url(../assets/images/main_img.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 390px;
+        background-size:  cover;
+        background-color: rgba(255,255,255,0.69);
+        background-blend-mode: screen;
+        text-align: center;
+        padding: 0 6%;
+        h1 {
+            padding-top: 120px;
+            font-size: 3.3rem;
+        }
+        p {
+            padding-top: 20px;
+            font-size: 1.8rem;
+        }
+        a {
+            display: block;
+            padding-top: 135px; 
+        }
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 80%;
+
+        .top-cards {
+            .flex();
+            .card {
+                .flex(row, flex-start, center);
+                padding-top: 30px;
+                img {
+                    height: 32px;
+                }
+                .text-container {
+                    padding-left: 5%;
+                    h3 {
+                        font-size: 2.4rem;
+                    }
+                    p {
+                        padding-top: 10px;
+                        line-height: 1.7;
+                        font-size: 1.6rem;
+                    }
+                }
+                
+            }
+        }
+    }
+} 
