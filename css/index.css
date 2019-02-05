@@ -649,6 +649,17 @@ footer p {
 .home .container .who-are-you .card figure h3 {
   display: inline-block;
 }
+@media (min-width: 1000px) {
+  .home .container .who-are-you .card figure {
+    height: 400px;
+    background-position: center;
+  }
+}
+@media (min-width: 1000px) {
+  .home .container .who-are-you .card {
+    width: 49%;
+  }
+}
 .home .container .who-are-you .man figure {
   background-image: url(../assets/images/Man_who_are_you.jpg);
   background-position-x: 30%;
@@ -659,6 +670,14 @@ footer p {
 .home .container .who-are-you .woman figure {
   background-image: url(../assets/images/Woman_who_are_you.jpg);
   background-position-x: 90%;
+}
+@media (min-width: 1000px) {
+  .home .container .who-are-you .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
 }
 .home .bottom-img {
   background-image: url(../assets/images/shaktishiva_bottom_image.jpg);

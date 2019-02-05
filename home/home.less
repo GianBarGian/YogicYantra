@@ -285,6 +285,13 @@
                     h3 {
                         display: inline-block;
                     }
+                    @media @desktop {
+                        height: 400px;
+                        background-position: center;
+                    }
+                }
+                @media @desktop {
+                    width: 49%;
                 }
             }
              
@@ -300,6 +307,11 @@
                     background-position-x: 90%;
                 }
             } 
+            @media @desktop {
+                .card-container {
+                    .flex(row, space-between);
+                }
+            }
         }
     }
 
