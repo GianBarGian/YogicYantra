@@ -1,0 +1,29 @@
+footer {
+    background: black;
+    color: white;
+    padding-left: 20%;
+    font-size: 1.4rem;
+    li::before {content: "•"; color: white;
+        display: inline-block; width: 1em;
+        margin-left: -1em}
+
+    h4, li{
+        padding-top: 10px;
+    }
+
+    .small-card, .address, .payment-methods {
+        padding-top: 20px;
+    }
+
+    a {
+        color: white;
+    }
+
+    .payment-methods {
+        .flex();
+        flex-wrap: wrap;
+        h4 {
+            width: 100%;
+        }
+    }
+}

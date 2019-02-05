@@ -8,10 +8,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Build week",
   "devDependencies": {
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GianBarGian/YogicYantra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GianBarGian/YogicYantra/issues"
+  },
+  "homepage": "https://github.com/GianBarGian/YogicYantra#readme"
 }
