@@ -373,4 +373,24 @@ header span {
 }
 .home .container .who-are-you {
   order: 1;
+  width: 100%;
+  text-align: center;
+}
+.home .container .who-are-you .card figure {
+  height: 255px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+.home .container .who-are-you .card figure h3 {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 42%;
+}
+.home .container .who-are-you .man figure {
+  background-image: url(../assets/images/Man_who_are_you.jpg);
+}
+.home .container .who-are-you .woman figure {
+  background-image: url(../assets/images/Woman_who_are_you.jpg);
 }
