@@ -182,6 +182,7 @@ h2 {
   padding: 5px 0;
 }
 .to-top {
+  display: none;
   font-family: "ElegantIcons";
   position: fixed;
   z-index: 1;
@@ -195,6 +196,9 @@ h2 {
 .to-top a {
   color: white;
   font-size: 3rem;
+}
+.open {
+  display: block;
 }
 header {
   position: relative;

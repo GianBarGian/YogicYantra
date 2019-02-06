@@ -19,6 +19,9 @@ mainList.appendChild(unorderedLists[2]);
 setViewportWidth();
 if (viewportWidth < 1000) {
     header.appendChild(mainList);
+} else {        
+    topHeader.appendChild(unorderedLists[2]);
+    navHeader.appendChild(unorderedLists[0]);
 }
 
 window.addEventListener('resize', () => {
