@@ -2,12 +2,12 @@ const unorderedLists = document.querySelectorAll('header ul');
 const mainHeaderItems = unorderedLists[0];
 const moreMenuItems = unorderedLists[1];
 const topHeaderItems = unorderedLists[2];
-const icons = document.querySelectorAll('header span');
 const header = document.querySelector('header')
 const topHeader = document.querySelector('.top-header');
 const navHeader = document.querySelector('nav');
 const moreAnchor = document.querySelector('.more')
 const lens = document.querySelector('.lens');
+const hamburger = document.querySelector('.menu')
 const searchForm = document.querySelector('.search');
 const searchClose = document.querySelector('.search span');
 
@@ -73,7 +73,17 @@ window.addEventListener('resize', () => {
     }
 })
 
-icons[2].addEventListener('click', () => mainList.classList.toggle('close'));
+hamburger.addEventListener('click', () => {
+    if (mainList.classList.contains('close')) {
+        mainList.classList.remove('close');
+        TweenMax.to('.main-list', 0, {scaleY: 1, y: 0});
+        TweenMax.from('.main-list', 1, {scaleY: 0, y: -190});
+    } else {
+        TweenMax.to('.main-list', 1, {scaleY: 0, y: -190});
+        setTimeout(() => mainList.classList.add('close'), 1000) ;
+    }
+    
+});
 moreAnchor.addEventListener('mouseover', () => moreMenuItems.classList.remove('close'));
 moreMenuItems.addEventListener('mouseover', () => moreMenuItems.classList.remove('close'));
 moreAnchor.addEventListener('mouseout', () => moreMenuItems.classList.add('close'));
