@@ -312,9 +312,22 @@ header {
 .main-list li {
   padding: 7px 15%;
 }
-.main-list .more-menu,
 .main-list .top-header-menu {
   padding-left: 7%;
+}
+.more-menu {
+  display: none;
+  position: absolute;
+  top: 85px;
+  right: 5%;
+  z-index: 1;
+  width: 13%;
+  background: white;
+  font-size: 1.6rem;
+  padding: 35px 0 15px 0;
+}
+.more-menu li {
+  padding: 10px 20%;
 }
 footer {
   background: black;
@@ -330,7 +343,7 @@ footer li::before {
   margin-left: -1em;
 }
 footer .card-container {
-  width: 80%;
+  width: 85%;
   padding-bottom: 30px;
 }
 @media (min-width: 1000px) {
@@ -603,7 +616,7 @@ footer p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 85%;
+  height: 88%;
   background: rgba(255, 255, 255, 0.9);
 }
 .home .container .best-selling .card .cover .heart {

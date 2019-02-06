@@ -9,11 +9,15 @@ class CardAnimation {
         this.card = card;
         this.cover = cover;
         this.heart = heart;
+        
 
         this.cover.appendChild(this.heart);
         this.card.appendChild(this.cover);
-
-        this.card.addEventListener('mouseover', () => this.cover.classList.add('open'));
+        
+        this.card.addEventListener('mouseover', () => {
+            this.cover.classList.add('open');
+            
+        });
         this.card.addEventListener('mouseout', () => this.cover.classList.remove('open'))
     }
 
