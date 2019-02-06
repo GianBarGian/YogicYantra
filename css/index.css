@@ -299,9 +299,10 @@ header span {
   background: white;
   left: 14%;
   font-size: 1.4rem;
+  padding-top: 15px;
 }
 .main-list li {
-  padding: 7px 6%;
+  padding: 7px 15%;
 }
 .main-list .more-menu,
 .main-list .top-header-menu {
