@@ -15,6 +15,14 @@ header span {
     }
     ul  {
         display: none;
+        @media @desktop {
+            width: 12%;
+            .flex(row, space-around);
+        }
+    }
+    @media @desktop {
+        padding: 10px 2%;
+        .flex(row, space-between, baseline);
     }
 }
 
@@ -25,13 +33,51 @@ header span {
     
     .logo img{
         height: 40px;
+        @media @desktop {
+            height: 65px;
+        }
     }
 
     nav {
-        .flex();
+        width: 20%;
+        .flex(row, space-between, inherit);
         ul {
+            display: none;
+            @media @desktop {
+                .flex(row, space-between); 
+                flex-grow: 1;
+                font-size: 1.6rem;
+                
+            }
+        }
+        @media @desktop {
+            width: 25%;
+        }
+    }
+
+    .lens{
+        font-size: 1.9rem;
+        @media @desktop {
+            order: 1;
+            padding-left: 5%;
+        }
+    }
+
+    .menu {
+        font-size: 2.8rem;
+
+        @media @desktop {
             display: none;
         }
     }
+
+    @media @desktop {
+        padding: 0 2%;
+        justify-content: space-between;
+    }
     
+}
+
+.more-menu {
+    display: none;
 }
