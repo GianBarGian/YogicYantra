@@ -70,10 +70,20 @@
                         font-size: 1.6rem;
                     }
                 }  
-            }
-            @media @desktop {
+                @media @tablet {
+                    width: 37%; 
+                    @media @desktop {
+                        width: 24%;
+                    }
+                }
+            } 
+            @media @tablet {
                 .flex(row, space-between);
-                width: 100%;
+                flex-wrap: wrap;
+                @media @desktop {
+                    
+                    width: 100%;
+                }
             }
         }
 
@@ -83,13 +93,17 @@
 
             .cards-container {
                 padding-top: 100px; 
-                @media @desktop {
+                @media @tablet {
                     .flex(row, space-between);
+                    flex-wrap: wrap;
+                    @media @desktop {
+                        
+                    }
                 }
             }
 
             .card {
-                height: 300px;
+                height: 250px;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size:  cover;
@@ -100,14 +114,16 @@
                 
                 a {
                     display: inline-block;
-                    margin-top: 150px;
+                    margin-top: 130px;
                     .button(white, rgba(221, 202, 202, 0.384));
                 }
-
-                @media @desktop {
-                    height: 375px;
-                    width: 23.5%;
+                @media @tablet {
+                    width: 48.5%;
+                    @media @desktop {
+                        width: 23.5%;
+                    }    
                 }
+                
             }
 
             .mat {
@@ -126,12 +142,14 @@
             .special-deal {
                 background-image: url(../assets/images/Special_deal_categories.jpg);
             }
-
-            @media @desktop {
+            @media @tablet {
                 order: 0;
-                text-align: center;
-                width: 100%;
+                @media @desktop {
+                    text-align: center;
+                    width: 100%;
+                }
             }
+            
         }
 
         .best-selling {
@@ -265,9 +283,12 @@
                         padding-top: 35px;
                         border-bottom: 2px solid white;
                     }
-                    @media @desktop {
-                        height: 400px;
+                    @media @tablet {
+                        height: 450px;
                         background-position: center;
+                    }
+                    @media @desktop {
+                        
                     }
                 }
                 @media @desktop {

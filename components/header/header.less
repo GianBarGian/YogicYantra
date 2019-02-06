@@ -35,6 +35,9 @@ header{
     nav {
         width: 20%;
         .flex(row, space-between, inherit);
+        @media @tablet {
+            .flex(row, space-around, inherit);
+        }
         @media @desktop {
             .flex(row, space-evenly, inherit);
             width: 36%;
@@ -115,11 +118,33 @@ header{
     position: absolute;
     top: 60px;
     right: 1%;
-    
     .flex(row, flex-start, center);
     span {
+        background: white;
         font-size: 1.6rem;
-        padding-bottom: 1px;
+        @media @desktop {
+            font-size: 3.5rem;
+        }
     }
+    #search{
+        @media @tablet {
+            padding: 0 7%;
+            @media @desktop {
+                font-size: 3rem;
+                padding: 14px 0% 14px 2%;
+            }    
+        }
+        
+    }
+
+    @media @tablet {
+        right: 12%;
+        @media @desktop {
+            right: 0%;
+            top: 42px;
+            width: 30%;
+        }
+    }
+    
 }
 
