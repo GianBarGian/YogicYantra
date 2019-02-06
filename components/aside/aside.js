@@ -1,10 +1,12 @@
 const scrollTop = document.querySelector('.to-top');
 
+
+scrollTop.classList.add('close');
 window.addEventListener('scroll', () => {
     if (pageYOffset > document.documentElement.clientHeight) {
-        scrollTop.classList.add('open')
+        scrollTop.classList.remove('close')
     } else {
-        scrollTop.classList.remove('open');
+        scrollTop.classList.add('close');
     }
 })
 

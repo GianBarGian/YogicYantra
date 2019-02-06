@@ -170,8 +170,8 @@ h2 {
   padding-bottom: 10px;
   border-bottom: 1px solid black;
 }
-.open {
-  display: block !important;
+.close {
+  display: none !important;
 }
 .language {
   position: fixed;
@@ -188,7 +188,6 @@ h2 {
   padding: 5px 0;
 }
 .to-top {
-  display: none;
   font-family: "ElegantIcons";
   position: fixed;
   z-index: 1;
@@ -301,7 +300,6 @@ header {
   }
 }
 .main-list {
-  display: none;
   width: 72%;
   position: absolute;
   background: white;
@@ -316,7 +314,6 @@ header {
   padding-left: 7%;
 }
 .more-menu {
-  display: none;
   position: absolute;
   top: 85px;
   right: 5%;
@@ -612,7 +609,6 @@ footer p {
 }
 .home .container .best-selling .card .cover {
   position: absolute;
-  display: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -681,7 +677,7 @@ footer p {
   width: 100%;
   text-align: center;
 }
-.home .container .who-are-you a {
+.home .container .who-are-you .button {
   display: inline-block;
   margin-top: 20px;
 }
@@ -696,6 +692,11 @@ footer p {
 }
 .home .container .who-are-you .card figure h3 {
   display: inline-block;
+  width: 85%;
+  color: white;
+  font-size: 2.9rem;
+  padding-top: 35px;
+  border-bottom: 2px solid white;
 }
 @media (min-width: 1000px) {
   .home .container .who-are-you .card figure {

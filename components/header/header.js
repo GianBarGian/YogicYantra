@@ -17,6 +17,7 @@ let setViewportWidth = function () {
 const mainListCreation = () => {
     mainList = document.createElement('div');
     mainList.classList.add('main-list');
+    mainList.classList.add('close');
     mainList.appendChild(mainHeaderItems);
     mainList.appendChild(moreMenuItems);
     mainList.appendChild(topHeaderItems);
@@ -25,15 +26,17 @@ const mainListCreation = () => {
 mainListCreation();
 setViewportWidth();
 if (viewportWidth < 1000) {
-    header.appendChild(mainList);
     moreMenuItems.classList.remove('more-menu');
     moreMenuItems.classList.add('top-header-menu');
-} else {        
+    header.appendChild(mainList);
+} else {
+    moreMenuItems.classList.add('more-menu');
+    moreMenuItems.classList.add('close');
+    moreMenuItems.classList.remove('top-header-menu');        
     topHeader.appendChild(topHeaderItems);
     navHeader.appendChild(mainHeaderItems);
     moreAnchor.appendChild(moreMenuItems);
-    moreMenuItems.classList.add('more-menu');
-    moreMenuItems.classList.remove('top-header-menu');
+    
 }
 
 window.addEventListener('resize', () => {
@@ -44,10 +47,15 @@ window.addEventListener('resize', () => {
             topHeader.removeChild(topHeaderItems);
             navHeader.removeChild(mainHeaderItems);
         }
-        mainListCreation();
+        if (!header.contains(mainList)) {
+           mainListCreation(); 
+        }
+        
         moreMenuItems.classList.remove('more-menu');
         moreMenuItems.classList.add('top-header-menu');
+        moreMenuItems.classList.remove('close')
         header.appendChild(mainList);
+        
         
     } else {
         
@@ -59,9 +67,13 @@ window.addEventListener('resize', () => {
         moreAnchor.appendChild(moreMenuItems);
         moreMenuItems.classList.add('more-menu');
         moreMenuItems.classList.remove('top-header-menu');
+        moreMenuItems.classList.add('close');
+
+        
+        
     }
 })
-icons[2].addEventListener('click', () => mainList.classList.toggle('open'));
-moreAnchor.addEventListener('mouseover', () => moreMenuItems.classList.add('open'));
-moreMenuItems.addEventListener('mouseover', () => moreMenuItems.classList.add('open'));
-moreAnchor.addEventListener('mouseout', () => moreMenuItems.classList.remove('open'));
+icons[2].addEventListener('click', () => mainList.classList.toggle('close'));
+moreAnchor.addEventListener('mouseover', () => moreMenuItems.classList.remove('close'));
+moreMenuItems.addEventListener('mouseover', () => moreMenuItems.classList.remove('close'));
+moreAnchor.addEventListener('mouseout', () => moreMenuItems.classList.add('close'));
