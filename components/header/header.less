@@ -40,7 +40,8 @@ header{
         width: 20%;
         .flex(row, space-between, inherit);
         @media @desktop {
-            width: 25%;
+            .flex(row, space-evenly, inherit);
+            width: 36%;
         }
     }
 
@@ -48,7 +49,7 @@ header{
         font-size: 1.9rem;
         @media @desktop {
             order: 1;
-            padding-left: 5%;
+            padding-left: 7%;
         }
     }
 
@@ -70,7 +71,7 @@ header{
 .top-header-menu  {
     
     @media @desktop {
-        width: 12%;
+        width: 17%;
         .flex(row, space-around);
     }
 }
