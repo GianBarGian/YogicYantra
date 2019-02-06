@@ -8,5 +8,10 @@ window.addEventListener('scroll', () => {
     }
 })
 
-scrollTop.addEventListener('click', () => window.scrollTo(0, 0));
+//scrollTop.addEventListener('click', () => window.scrollTo(0, 0));
+
+scrollTop.addEventListener('click', event => {
+    event.preventDefault();
+    TweenMax.to(window, 1, {scrollTo:{y:0}});
+}) 
 
