@@ -7,12 +7,14 @@ const header = document.querySelector('header')
 const topHeader = document.querySelector('.top-header');
 const navHeader = document.querySelector('nav');
 const moreAnchor = document.querySelector('.more')
+const lens = document.querySelector('.lens');
+const searchForm = document.querySelector('.search');
+const searchClose = document.querySelector('.search span');
 
 let viewportWidth;
 let setViewportWidth = function () {
 	viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 }
-
 
 const mainListCreation = () => {
     mainList = document.createElement('div');
@@ -25,6 +27,7 @@ const mainListCreation = () => {
 }
 mainListCreation();
 setViewportWidth();
+searchForm.classList.add('close');
 if (viewportWidth < 1000) {
     moreMenuItems.classList.remove('more-menu');
     moreMenuItems.classList.add('top-header-menu');
@@ -39,8 +42,9 @@ if (viewportWidth < 1000) {
     
 }
 
+
 window.addEventListener('resize', () => {
-    setViewportWidth();
+    setViewportWidth();    
     
     if (viewportWidth < 1000) {
         if (topHeader.contains(topHeaderItems)) {
@@ -55,25 +59,23 @@ window.addEventListener('resize', () => {
         moreMenuItems.classList.add('top-header-menu');
         moreMenuItems.classList.remove('close')
         header.appendChild(mainList);
-        
-        
     } else {
-        
         if (header.contains(mainList)) {
             header.removeChild(mainList);
-        }        
+        }
+
         topHeader.appendChild(topHeaderItems);
         navHeader.appendChild(mainHeaderItems);
         moreAnchor.appendChild(moreMenuItems);
         moreMenuItems.classList.add('more-menu');
         moreMenuItems.classList.remove('top-header-menu');
         moreMenuItems.classList.add('close');
-
-        
-        
     }
 })
+
 icons[2].addEventListener('click', () => mainList.classList.toggle('close'));
 moreAnchor.addEventListener('mouseover', () => moreMenuItems.classList.remove('close'));
 moreMenuItems.addEventListener('mouseover', () => moreMenuItems.classList.remove('close'));
 moreAnchor.addEventListener('mouseout', () => moreMenuItems.classList.add('close'));
+lens.addEventListener('click', () => searchForm.classList.remove('close'));
+searchClose.addEventListener('click', () => searchForm.classList.add('close'));
