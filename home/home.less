@@ -134,7 +134,7 @@
             }
         }
 
-        .new-products {
+        .best-selling {
             text-align: center;
             padding-top: 100px;
             .cards-container {
@@ -144,7 +144,6 @@
                 }
             }
 
-            
             h3, p {
                 display: none; 
                 @media @desktop {
@@ -165,14 +164,31 @@
             .card {
                 padding: 30px 0;
                 border-bottom: 1px solid lightgray;
-               img {
-                max-width:100%;
-                padding-bottom: 40px;
+                figure {
+                    position: relative;
+                }
+                img {
+                    max-width:100%;
+                    padding-bottom: 40px;
+               }
+               .cover {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 88%;
+                    background: rgba(255,255,255,.9);
+                    .heart {
+                        position: absolute;
+                        top: 49%;
+                        left: 44%;
+                        font-size: 3.2rem;
+                    }
                }
                @media @desktop {
-                   border: 0;
-                   padding-bottom: 100px;
-               }
+                    border: 0;
+                    padding-bottom: 100px;
+                }
             }
         }
 
@@ -224,53 +240,12 @@
             }
         }
 
-        .best-selling {
-            text-align: center;
-            padding-top: 100px;
-            .cards-container {
-                padding-top: 70px;
-                @media @desktop {
-                    .flex(row, space-between);
-                }
-            }
-
-            h3, p {
-                display: none; 
-                @media @desktop {
-                    display: block;
-                }
-            }
-
-            h3 {
-                font-size: 2.3rem;
-                padding-bottom: 10px;
-            }
-
-            p {
-                font-size: 1.6rem;
-                padding-top: 10px;
-            }
-
-            .card {
-                padding: 30px 0;
-                border-bottom: 1px solid lightgray;
-               img {
-                max-width:100%;
-                padding-bottom: 40px;
-               }
-               @media @desktop {
-                border: 0;
-                padding-bottom: 100px;
-                }
-            }
-        }
-
         .who-are-you {
             order: 1;
             width: 100%;
             text-align: center;
             
-            a {
+            .button {
                 display: inline-block;
                 margin-top: 20px;
             }
@@ -284,6 +259,11 @@
                     background-position: bottom;
                     h3 {
                         display: inline-block;
+                        width: 85%;
+                        color: white;
+                        font-size: 2.9rem;
+                        padding-top: 35px;
+                        border-bottom: 2px solid white;
                     }
                     @media @desktop {
                         height: 400px;
@@ -329,15 +309,31 @@
             color: white;
             border: 0;
             padding-top: 15px; 
+            @media @desktop {
+                font-size: 5rem;
+                color: black;
+                padding: 150px 50% 0 1%;
+            }
         }
         p{
             color: white;
             font-size: 1.8rem;
             padding-top: 10px;
             padding-bottom: 200px;
+            @media @desktop {
+                font-size: 2.5rem;
+                color: black;
+                padding: 50px 50% 0 1%;
+            }
         }
-        a{
-            bottom: 35px;
+        @media @desktop {
+            height: 700px;
+            background-blend-mode: unset;
+
+            a {
+                display: inline-block;
+                margin: 80px 50% 0 1%;
+            }
         }
     }
 } 
