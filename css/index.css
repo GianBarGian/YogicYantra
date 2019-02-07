@@ -184,7 +184,7 @@ h2 {
   border: 1px solid #a1a1a1;
   background-color: #0A0A0A4D;
   font-size: 1.4rem;
-  bottom: 30px;
+  bottom: 60px;
   z-index: 1;
 }
 .language a {
@@ -397,6 +397,20 @@ footer .card-container {
   width: 85%;
   padding-bottom: 30px;
 }
+footer .card-container .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+@media (min-width: 1000px) {
+  footer .card-container .card {
+    width: 23.5%;
+  }
+}
+footer .card-container .small-card {
+  padding-right: 35%;
+}
 @media (min-width: 1000px) {
   footer .card-container {
     display: flex;
@@ -417,17 +431,27 @@ footer .payment-methods {
 footer a {
   color: white;
 }
+footer .address {
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer .address h4 {
+  width: 100%;
+}
+footer .address .small-card {
+  display: inline-block;
+  padding-right: 30px;
+}
 footer .payment-methods {
-  width: 15%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
+  width: 100%;
   flex-wrap: wrap;
 }
 footer .payment-methods h4 {
   padding-left: 5%;
   width: 100%;
+}
+footer .payment-methods .small-card {
+  padding-right: 15px;
 }
 footer p {
   width: 80%;

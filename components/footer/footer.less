@@ -10,6 +10,16 @@ footer {
     .card-container {
         width: 85%;
         padding-bottom: 30px;
+
+        .card {
+            .flex(row, space-between);
+            @media @desktop {
+                width: 23.5%;
+            }
+        }
+        .small-card {
+            padding-right: 35%;
+        }
         @media @desktop {
             .flex(row, space-between);
         }             
@@ -27,13 +37,28 @@ footer {
         color: white;
     }
 
+    .address {
+        width: 100%;
+        
+        flex-wrap: wrap;
+        h4 {
+            width: 100%;
+        }
+        .small-card {
+            display: inline-block;
+            padding-right: 30px;
+        }
+    }
+
     .payment-methods {
-        width: 15%;
-        .flex(row, space-around);
+        width: 100%;
         flex-wrap: wrap;
         h4 {
             padding-left: 5%;
             width: 100%;
+        }
+        .small-card {
+            padding-right: 15px;
         }
     }
     p {
