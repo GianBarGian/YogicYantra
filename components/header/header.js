@@ -28,7 +28,7 @@ const mainListCreation = () => {
 mainListCreation();
 setViewportWidth();
 searchForm.classList.add('close');
-if (viewportWidth < 1000) {
+if (viewportWidth < 1200) {
     moreMenuItems.classList.remove('more-menu');
     moreMenuItems.classList.add('top-header-menu');
     header.appendChild(mainList);
@@ -46,7 +46,7 @@ if (viewportWidth < 1000) {
 window.addEventListener('resize', () => {
     setViewportWidth();    
     
-    if (viewportWidth < 1000) {
+    if (viewportWidth < 1200) {
         if (topHeader.contains(topHeaderItems)) {
             topHeader.removeChild(topHeaderItems);
             navHeader.removeChild(mainHeaderItems);
@@ -87,5 +87,23 @@ hamburger.addEventListener('click', () => {
 moreAnchor.addEventListener('mouseover', () => moreMenuItems.classList.remove('close'));
 moreMenuItems.addEventListener('mouseover', () => moreMenuItems.classList.remove('close'));
 moreAnchor.addEventListener('mouseout', () => moreMenuItems.classList.add('close'));
-lens.addEventListener('click', () => searchForm.classList.remove('close'));
-searchClose.addEventListener('click', () => searchForm.classList.add('close'));
+lens.addEventListener('click', () => {
+    TweenMax.to('.search', 0, {y: 0, opacity: 1});
+
+    TweenMax.to('header nav', 0.5, {y: 35, opacity: 0});
+    setTimeout(() => navHeader.classList.add('close'), 500);
+    TweenMax.from('.search', 0.5, {y: -35, opacity: 0});
+    searchForm.classList.remove('close');
+
+    //setTimeout(() => TweenMax.to('.search', 0, {y: 0, opacity: 1}), 501);
+});
+searchClose.addEventListener('click', () => {
+    TweenMax.to('header nav', 0, {y: 0, opacity: 1});
+    
+    TweenMax.to('.search', 0.5, {y: 35, opacity: 0});
+    setTimeout(() => searchForm.classList.add('close'), 500);
+    TweenMax.from('header nav', 0.5, {y: -35, opacity: 0});
+    navHeader.classList.remove('close');
+
+    //setTimeout(() => TweenMax.to('header nav', 0, {y: 0, opacity: 1}), 501);
+});
