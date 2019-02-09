@@ -23,8 +23,8 @@ header{
 .main-header {
     height: 75px;
     .border-bottom();
-    .flex(row, space-around, center);
-    
+    .flex(row, space-between, center);
+    padding: 0 7%;
     .logo img{
         height: 40px;
         @media @desktop {
@@ -35,6 +35,9 @@ header{
     nav {
         width: 20%;
         .flex(row, space-between, inherit);
+        @media @tablet {
+            .flex(row, space-around, inherit);
+        }
         @media @desktop {
             .flex(row, space-evenly, inherit);
             width: 36%;
@@ -51,15 +54,13 @@ header{
 
     .menu {
         font-size: 2.8rem;
-
         @media @desktop {
             display: none;
         }
     }
 
     @media @desktop {
-        padding: 0 2%;
-        justify-content: space-between;
+        padding: 0 3%;
     }
     
 }
@@ -111,5 +112,35 @@ header{
     }
 }
 
-
+.search {
+    position: absolute;
+    top: 60px;
+    right: 0%;
+    .flex(row, flex-end, center);
+    span {
+        background: white;
+        font-size: 2.2rem;
+       
+    }
+    #search{
+        border: 0;
+        padding: 3px 0;
+        outline: none;     
+        font-size: 1.6rem;
+        width: 57%;
+        @media @tablet {
+            width: 100%;
+            @media @desktop {
+                
+            }    
+        }
+    }
+    @media @tablet {
+        right: 5%;
+        @media @desktop {
+            right: 11%;
+            top: 65px;
+        }
+    }
+}
 

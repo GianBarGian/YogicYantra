@@ -147,7 +147,6 @@ html {
 [data-icon]:before {
   font-family: 'ElegantIcons';
   content: attr(data-icon);
-  speak: none;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
@@ -157,6 +156,11 @@ html {
 }
 * {
   font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
+}
+h1,
+.main-img p,
+h3 {
+  font-family: 'aspira';
 }
 span {
   font-family: "ElegantIcons";
@@ -179,7 +183,7 @@ h2 {
   border: 1px solid #a1a1a1;
   background-color: #0A0A0A4D;
   font-size: 1.4rem;
-  bottom: 30px;
+  bottom: 60px;
   z-index: 1;
 }
 .language a {
@@ -216,7 +220,7 @@ header {
   text-align: center;
   display: block;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .top-header {
     padding: 10px 2%;
     display: flex;
@@ -230,13 +234,14 @@ header {
   border-bottom: 2px solid black;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 7%;
 }
 .main-header .logo img {
   height: 40px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .main-header .logo img {
     height: 65px;
   }
@@ -248,7 +253,15 @@ header {
   justify-content: space-between;
   align-items: inherit;
 }
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
+  .main-header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: inherit;
+  }
+}
+@media (min-width: 1200px) {
   .main-header nav {
     display: flex;
     flex-direction: row;
@@ -260,7 +273,7 @@ header {
 .main-header .lens {
   font-size: 1.9rem;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .main-header .lens {
     order: 1;
     padding-left: 7%;
@@ -269,18 +282,17 @@ header {
 .main-header .menu {
   font-size: 2.8rem;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .main-header .menu {
     display: none;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .main-header {
-    padding: 0 2%;
-    justify-content: space-between;
+    padding: 0 3%;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .top-header-menu {
     width: 17%;
     display: flex;
@@ -289,7 +301,7 @@ header {
     align-items: stretch;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .main-header-list {
     display: flex;
     flex-direction: row;
@@ -326,6 +338,42 @@ header {
 .more-menu li {
   padding: 10px 20%;
 }
+.search {
+  position: absolute;
+  top: 60px;
+  right: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.search span {
+  background: white;
+  font-size: 2.2rem;
+}
+.search #search {
+  border: 0;
+  padding: 3px 0;
+  outline: none;
+  font-size: 1.6rem;
+  width: 57%;
+}
+@media (min-width: 500px) {
+  .search #search {
+    width: 100%;
+  }
+}
+@media (min-width: 500px) {
+  .search {
+    right: 5%;
+  }
+}
+@media (min-width: 500px) and (min-width: 1200px) {
+  .search {
+    right: 11%;
+    top: 65px;
+  }
+}
 footer {
   background: black;
   color: white;
@@ -343,7 +391,21 @@ footer .card-container {
   width: 85%;
   padding-bottom: 30px;
 }
-@media (min-width: 1000px) {
+footer .card-container .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+@media (min-width: 1200px) {
+  footer .card-container .card {
+    width: 23.5%;
+  }
+}
+footer .card-container .small-card {
+  padding-right: 35%;
+}
+@media (min-width: 1200px) {
   footer .card-container {
     display: flex;
     flex-direction: row;
@@ -363,17 +425,27 @@ footer .payment-methods {
 footer a {
   color: white;
 }
+footer .address {
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer .address h4 {
+  width: 100%;
+}
+footer .address .small-card {
+  display: inline-block;
+  padding-right: 30px;
+}
 footer .payment-methods {
-  width: 15%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
+  width: 100%;
   flex-wrap: wrap;
 }
 footer .payment-methods h4 {
   padding-left: 5%;
   width: 100%;
+}
+footer .payment-methods .small-card {
+  padding-right: 15px;
 }
 footer p {
   width: 80%;
@@ -408,7 +480,7 @@ footer p {
   padding-top: 70px;
   font-size: 3.3rem;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .main-img h1 {
     font-size: 5rem;
     padding-top: 150px;
@@ -419,7 +491,7 @@ footer p {
   font-size: 1.8rem;
   padding-bottom: 30px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .main-img p {
     font-size: 2.9rem;
     padding-top: 25px;
@@ -439,7 +511,7 @@ footer p {
 .home .main-img a:hover {
   background: white;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .main-img a {
     border: 2px solid black;
     text-align: center;
@@ -453,7 +525,7 @@ footer p {
     background: rgba(221, 202, 202, 0.384);
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .main-img {
     height: 600px;
     background-blend-mode: unset;
@@ -490,12 +562,27 @@ footer p {
   line-height: 1.7;
   font-size: 1.6rem;
 }
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
+  .home .container .top-cards .card {
+    width: 37%;
+  }
+}
+@media (min-width: 500px) and (min-width: 1200px) {
+  .home .container .top-cards .card {
+    width: 24%;
+  }
+}
+@media (min-width: 500px) {
   .home .container .top-cards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 500px) and (min-width: 1200px) {
+  .home .container .top-cards {
     width: 100%;
   }
 }
@@ -506,16 +593,17 @@ footer p {
 .home .container .categories .cards-container {
   padding-top: 100px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
   .home .container .categories .cards-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    flex-wrap: wrap;
   }
 }
 .home .container .categories .card {
-  height: 300px;
+  height: 250px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -526,7 +614,7 @@ footer p {
 }
 .home .container .categories .card a {
   display: inline-block;
-  margin-top: 150px;
+  margin-top: 130px;
   border: 2px solid black;
   text-align: center;
   font-size: 2.1rem;
@@ -538,9 +626,14 @@ footer p {
 .home .container .categories .card a:hover {
   background: white;
 }
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
   .home .container .categories .card {
-    height: 375px;
+    width: 48.5%;
+    height: 280px;
+  }
+}
+@media (min-width: 500px) and (min-width: 1200px) {
+  .home .container .categories .card {
     width: 23.5%;
   }
 }
@@ -556,9 +649,13 @@ footer p {
 .home .container .categories .special-deal {
   background-image: url(../assets/images/Special_deal_categories.jpg);
 }
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
   .home .container .categories {
     order: 0;
+  }
+}
+@media (min-width: 500px) and (min-width: 1200px) {
+  .home .container .categories {
     text-align: center;
     width: 100%;
   }
@@ -570,7 +667,7 @@ footer p {
 .home .container .best-selling .cards-container {
   padding-top: 70px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .container .best-selling .cards-container {
     display: flex;
     flex-direction: row;
@@ -582,7 +679,7 @@ footer p {
 .home .container .best-selling p {
   display: none;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .container .best-selling h3,
   .home .container .best-selling p {
     display: block;
@@ -612,16 +709,16 @@ footer p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 88%;
+  height: 90%;
   background: rgba(255, 255, 255, 0.9);
 }
 .home .container .best-selling .card .cover .heart {
   position: absolute;
   top: 49%;
-  left: 44%;
+  left: 48%;
   font-size: 3.2rem;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .container .best-selling .card {
     border: 0;
     padding-bottom: 100px;
@@ -660,7 +757,7 @@ footer p {
   padding-bottom: 45px;
   border-bottom: 1px solid #e2e2e2;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .container .reference {
     order: 0;
   }
@@ -698,13 +795,13 @@ footer p {
   padding-top: 35px;
   border-bottom: 2px solid white;
 }
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
   .home .container .who-are-you .card figure {
-    height: 400px;
+    height: 450px;
     background-position: center;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .container .who-are-you .card {
     width: 49%;
   }
@@ -720,7 +817,7 @@ footer p {
   background-image: url(../assets/images/Woman_who_are_you.jpg);
   background-position-x: 90%;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .container .who-are-you .card-container {
     display: flex;
     flex-direction: row;
@@ -744,7 +841,7 @@ footer p {
   border: 0;
   padding-top: 15px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .bottom-img h2 {
     font-size: 5rem;
     color: black;
@@ -757,14 +854,14 @@ footer p {
   padding-top: 10px;
   padding-bottom: 200px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .bottom-img p {
     font-size: 2.5rem;
     color: black;
     padding: 50px 50% 0 1%;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .home .bottom-img {
     height: 700px;
     background-blend-mode: unset;
